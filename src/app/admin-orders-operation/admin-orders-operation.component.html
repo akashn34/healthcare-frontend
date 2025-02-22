@@ -1,0 +1,24 @@
+<h2>Admin Order Management</h2>
+<table border="1">
+  <tr>
+    <th>Order ID</th>
+    <th>Email</th>
+    <th>Amount</th>
+    <th>Status</th>
+    <th>Order Date</th>
+    <th>Actions</th>
+  </tr>
+  <tr *ngFor="let order of orders">
+    <td>{{ order.oid }}</td>
+    <td>{{ order.emailid }}</td>
+    <td>{{ order.amount }}</td>
+    <td>{{ order.status }}</td>
+    <td>{{ order.orderdate }}</td>
+    <td>
+      <button *ngIf="order.oid !== null" (click)="viewOrderInfo(order.oid)" class="view-btn">View Info</button>
+      <button (click)="deleteOrder(order.oid)" class="delete-btn">Delete</button>
+    </td>
+  </tr>
+</table>
+<p *ngIf="msg">{{ msg }}</p>
+

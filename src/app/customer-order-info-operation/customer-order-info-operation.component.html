@@ -1,0 +1,24 @@
+<h2>Your Orders Information</h2>
+
+<table *ngIf="orderInfos.length > 0" border="1">
+    <thead>
+      <tr>
+        <th>Order Item ID</th>
+        <th>Order ID</th>
+        <th>Product ID</th>
+        <th>Quantity</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let info of orderInfos">
+        <td>{{ info.orderItemId }}</td>
+        <td>{{ info.oid }}</td>
+        <td>{{ info.pid }}</td>
+        <td>{{ info.qty }}</td>
+        <td>{{ info.price }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div *ngIf="orderInfos.length === 0">No order info available for this order.</div>
+  

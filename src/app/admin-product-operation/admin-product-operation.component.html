@@ -1,0 +1,47 @@
+<div>
+    <a (click)="logout()">Logout</a>
+    <h2>Store or Edit Product</h2>
+    <form [formGroup]="productRef" (ngSubmit)="selectedProduct ? updateProduct() :storeProduct()">
+        <label>PId</label>
+        <input type="number" formControlName="pid" [disabled]="!!selectedProduct"><br/>
+        <label>PName</label>
+        <input type="text" formControlName="pname"><br/>
+        <label>Price</label>
+        <input type="number" formControlName="price"><br/>
+        <label>Description</label>
+        <input type="text" formControlName="description"><br/>
+        <label>Stock</label>
+        <input type="number" formControlName="stock"><br/>
+        <label>ImageURL</label>
+        <input type="url" formControlName="imageurl"><br/>
+        <input type="submit" [value]="selectedProduct ? 'Update Product' : 'Store Product'"/>
+        <input type="reset" value="Reset" (click)="clearMsg()"/>
+     </form>
+
+     <span style="color: red;">{{msg}}</span>
+
+
+<hr/>
+  <table border="1">
+    <tr>
+        <th>PId</th>
+        <th>PName</th>
+        <th>Price</th>
+        <th>Description</th>
+        <th>Stock</th>
+        <th>Image URL</th>
+    </tr>
+    <tr *ngFor="let product of products">
+        <td>{{product.pid}}</td>
+        <td>{{product.pname}}</td>
+        <td>{{product.price}}</td>
+        <td>{{product.description}}</td>
+        <td>{{product.stock}}</td>
+        <td><img src={{product.imageurl}} width="100px" height="100px"/></td>
+        <td>
+            <input type="button" value="Edit" (click)="editProduct(product)"/>
+            <input type="button" value="Delete" (click)="deleteProduct(product.pid)"/>
+        </td>
+    </tr>
+  </table>
+</div>

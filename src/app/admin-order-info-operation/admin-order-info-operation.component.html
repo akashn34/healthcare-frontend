@@ -1,0 +1,24 @@
+<h2>Order Details for Order Id: {{orderId}}</h2>
+
+<table *ngIf="orderInfos.length > 0" border="1">
+    <thead>
+        <tr>
+            <td>Order Item Id</td>
+            <td>Order Id</td>
+            <td>Product Id</td>
+            <td>Quantity</td>
+            <td>Price</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let info of orderInfos">
+            <td>{{ info.orderItemId}}</td>
+            <td>{{ info.oid}}</td>
+            <td>{{ info.pid}}</td>
+            <td>{{ info.qty}}</td>
+            <td>{{ info.price}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<p *ngIf="msg">{{msg}}</p>

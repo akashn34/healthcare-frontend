@@ -1,0 +1,18 @@
+<div class="customer-dashboard">
+    <!-- Logout Section -->
+    <a class="logout" (click)="logout()">Logout</a>
+
+    <!-- Header -->
+    <h2 class="dashboard-title" *ngIf="!isOrdersPage">Welcome to Your Dashboard</h2>
+
+    <!-- Product Section (Hidden when viewing Orders) -->
+    <div class="product-section" *ngIf="!isOrdersPage">
+        <h3>Explore Our Health Products</h3>
+        <p>Browse through our exclusive health products tailored to your needs. Find solutions that fit your health journey.</p>
+        <a class="view-products-btn" routerLink="product">View Products</a>
+        <a class="view-orders-btn" routerLink="orders">View Orders</a>  
+    </div>
+
+    <!-- Router Outlet for Navigating Product Details -->
+    <router-outlet></router-outlet>
+</div>

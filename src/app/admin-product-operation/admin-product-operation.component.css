@@ -1,0 +1,198 @@
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6; /* Light background */
+    margin: 0;
+    padding: 0;
+}
+
+/* Main Container */
+div {
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styling */
+h2 {
+    font-size: 28px;
+    color: #00796b; /* Health-care theme color */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    font-size: 16px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="url"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"] {
+    background-color: #00796b;
+    color: white;
+}
+
+input[type="submit"]:hover {
+    background-color: #004d40;
+}
+
+input[type="reset"] {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+input[type="reset"]:hover {
+    background-color: #bdbdbd;
+}
+
+input[disabled] {
+    background-color: #f2f2f2;
+    cursor: not-allowed;
+}
+
+/* Error Message Styling */
+span {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th, td {
+    padding: 12px;
+    font-size: 16px;
+}
+
+th {
+    background-color: #00796b;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #e0f2f1;
+}
+
+/* Image Styling in Table */
+td img {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 5px;
+}
+
+/* Buttons in Table */
+input[type="button"] {
+    padding: 8px 15px;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+input[type="button"]:first-child {
+    background-color: #00796b;
+    color: white;
+}
+
+input[type="button"]:first-child:hover {
+    background-color: #004d40;
+}
+
+input[type="button"]:last-child {
+    background-color: #e57373;
+    color: white;
+}
+
+input[type="button"]:last-child:hover {
+    background-color: #c62828;
+}
+
+/* Logout Link Styling */
+a {
+    display: block;
+    text-align: right;
+    font-size: 16px;
+    color: #00796b;
+    text-decoration: none;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+a:hover {
+    color: #004d40;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    form {
+        width: 100%;
+        padding: 10px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="url"] {
+        width: 100%;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    td img {
+        max-width: 80px;
+        max-height: 80px;
+    }
+}

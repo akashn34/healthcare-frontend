@@ -1,0 +1,119 @@
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6; /* Light, calm background */
+}
+
+/* Admin Dashboard Container */
+.admin-dashboard {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Header Styling */
+.admin-header {
+    background-color: #00796b; /* Health-care teal color */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.admin-header h2 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.admin-header p {
+    font-size: 18px;
+}
+
+/* Sidebar Navigation Styling */
+.admin-sidebar {
+    width: 250px;
+    background-color: #ffffff;
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
+    padding-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.admin-sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.admin-sidebar ul li {
+    margin: 20px 0;
+}
+
+.admin-sidebar a {
+    display: block;
+    padding: 15px;
+    color: #00796b; /* Health-care theme color */
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    text-align: left;
+    padding-left: 30px; /* Add padding for better text alignment */
+}
+
+.admin-sidebar a:hover {
+    background-color: #00796b;
+    color: white;
+}
+
+/* Main Content Area Styling */
+.admin-content {
+    margin-left: 250px; /* Make room for sidebar */
+    padding: 20px;
+    background-color: white;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.admin-content h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #00796b; /* Health-care theme color */
+}
+
+.admin-content p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Footer Styling */
+.admin-footer {
+    background-color: #00796b;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .admin-dashboard {
+        flex-direction: column;
+    }
+
+    .admin-sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .admin-content {
+        margin-left: 0;
+    }
+
+    .admin-sidebar a {
+        padding-left: 15px; /* Adjust padding for smaller screens */
+    }
+}

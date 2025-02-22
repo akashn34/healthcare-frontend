@@ -1,0 +1,107 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f9fc; /* Light background color for a calm feel */
+  margin: 0;
+  padding: 0;
+}
+
+/* Main container for the signup page */
+div {
+  width: 100%;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Header style */
+h2 {
+  font-size: 24px;
+  color: #00796b; /* Calming teal color */
+  margin-bottom: 20px;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Label styling */
+label {
+  font-size: 14px;
+  color: #555;
+  text-align: left;
+}
+
+/* Input styling */
+input[type="email"],
+input[type="password"],
+input[type="radio"] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Submit and Reset buttons */
+input[type="submit"],
+input[type="reset"] {
+  background-color: #00796b; /* Calming teal color */
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background-color: #004d40; /* Darker teal for hover effect */
+}
+
+/* Radio button alignment */
+input[type="radio"] {
+  width: auto;
+  margin: 5px;
+}
+
+/* Error message styling */
+span {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Link styling */
+a {
+  color: #00796b;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+  div {
+      width: 90%;
+      margin: 20px auto;
+      padding: 15px;
+  }
+
+  h2 {
+      font-size: 20px;
+  }
+}

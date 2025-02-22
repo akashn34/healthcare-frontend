@@ -1,0 +1,29 @@
+<div>
+    <h2>Login Page</h2>
+    <div *ngIf="!isLoggedIn">  <!-- Show login form only if user is not logged in -->
+        <form [formGroup]="loginRef" (ngSubmit)="signIn()">
+            <label>EmailId</label>
+            <input type="email" formControlName="emailid"/><br/>
+            <label>Password</label>
+            <input type="password" formControlName="password"/><br/>
+            <label>TypeOfUser</label>
+            <input type="radio" formControlName="typeofuser" value="admin"/>Admin
+            <input type="radio" formControlName="typeofuser" value="customer"/>User<br/>
+            <input type="submit" value="SignIn">
+            <input type="reset" value="Reset">
+        </form>
+        <br/>
+        <span style="color: red;">{{msg}}</span>
+        <br/>
+        <a routerLink="/signup" skipLocationChange="true">SignUp</a>
+</div>
+
+<!-- Conditional rendering when user is logged in -->
+<div [ngClass]="{'logged-in': isLoggedIn}" *ngIf="isLoggedIn">
+    <p>Welcome, {{ loggedInEmail }}</p>
+    <input type="button" value="Logout" (click)="logout()"/>
+</div>
+
+</div>
+  
+

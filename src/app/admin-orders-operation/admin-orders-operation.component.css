@@ -1,0 +1,93 @@
+/* General Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff; /* White background for clarity */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Table Header Styling */
+th {
+    background-color: #00796b; /* Healthcare teal color */
+    color: white;
+    padding: 12px;
+    text-align: left;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+/* Table Row and Cell Styling */
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+/* Alternate Row Background */
+tr:nth-child(even) {
+    background-color: #f4f7f6; /* Light grey for alternate rows */
+}
+
+/* Hover Effect on Rows */
+tr:hover {
+    background-color: #e0f2f1; /* Light teal hover effect */
+}
+
+/* Action Buttons Styling */
+button {
+    padding: 8px 12px;
+    border: none;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* View Info Button */
+.view-btn {
+    background-color: #0288d1; /* Blue for viewing info */
+    color: white;
+    margin-right: 5px;
+}
+
+.view-btn:hover {
+    background-color: #0277bd; /* Darker blue on hover */
+}
+
+/* Delete Button */
+.delete-btn {
+    background-color: #d32f2f; /* Red for delete */
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #b71c1c; /* Darker red on hover */
+}
+
+/* Message Styling */
+p {
+    color: #d32f2f;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    th, td {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}

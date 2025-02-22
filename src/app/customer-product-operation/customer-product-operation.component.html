@@ -1,0 +1,51 @@
+<div>
+    <!--<a (click)="logout()">Logout</a> -->
+    <br/>
+    <!-- Message display -->
+    <div *ngIf="msg" class="message-box">{{ msg }}</div>
+
+
+     <!-- Search bar for products -->
+     <input type="text" #searchBox placeholder="Search products..." (input)="searchProducts(searchBox.value)"/>
+     <br/><br/>
+ 
+     <!-- Product sorting options -->
+     <input type="button" value="Sort by Price (Low to High)" (click)="sortProductsByPrice('asc')"/>
+     <input type="button" value="Sort by Price (High to Low)" (click)="sortProductsByPrice('desc')"/>
+     <br/><br/>
+
+    <div>Number Of Item in Cart is {{cart.length}} 
+        <input type="button" value="View Cart" (click)="viewCart()"/>
+    </div>
+    <!--Product display-->
+    <div *ngIf="flag">
+        <div *ngFor="let product of products" class="imageClass">
+            <img src={{product.imageurl}} width="200px" height="200px"/>
+            <span>Name : {{product.pname}} Price: {{product.price}}</span>
+            <input type="button" value="Add To Cart" (click)="storeInCart(product)"/> <br/>
+        </div>
+    </div>
+    <!--Empty cart message-->
+    <div *ngIf="!flag && cart.length === 0">
+        <p>Your cart is empty.</p>
+        <input type="button" value="Back to Products" (click)="viewProducts()"/>
+    </div>
+
+    <!--Cart view-->
+    <div *ngIf="!flag && cart.length > 0">
+        <div *ngFor="let cc of cart; let i = index">
+            {{ cc.pname }} Quantity {{ cc.qty }} 
+            <input type="button" value="increment" (click)="increment(i)"/>
+            <input type="button" value="decrement" (click)="decrement(i)" [disabled]="cc.qty <= 1"/>
+            <input type="button" value="remove" (click)="remove(i)"/>
+            Total: {{ cc.qty * cc.price }}
+        </div>
+        <div>Total Cart Value: {{ calculateTotal() }}</div>
+        
+        <!--Cart actions-->
+        <input type="button" value="Clear Cart" (click)="clearCart()" *ngIf="cart.length > 0"/>
+        <input type="button" value="Save Cart" (click)="saveCart()" *ngIf="cart.length > 0"/>
+        <input type="button" value="Load Cart" (click)="loadCart()"/>
+        <input type="button" value="Place Order" (click)="placeOrder()" *ngIf="cart.length > 0"/>
+
+</div>

@@ -1,0 +1,53 @@
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Table Header */
+  thead {
+    background-color: #2a9d8f; /* Healthcare-themed green */
+    color: white;
+  }
+  
+  th, td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+  }
+  
+  /* Table Rows */
+  tbody tr:nth-child(even) {
+    background-color: #f8f9fa; /* Light background for alternating rows */
+  }
+  
+  tbody tr:hover {
+    background-color: #e9f5f3; /* Subtle hover effect */
+    transition: 0.3s;
+  }
+  
+  /* No Order Info Message */
+  div {
+    text-align: center;
+    font-size: 18px;
+    color: #ff0000;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    table {
+      font-size: 14px;
+    }
+    th, td {
+      padding: 10px;
+    }
+  }
+  
