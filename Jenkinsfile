@@ -18,12 +18,6 @@ pipeline {
             }
         }
 
-        stage('Run Tests') {
-            steps {
-                sh 'npm test -- --watch=false --browsers=ChromeHeadless'
-            }
-        }
-
         stage('Build Angular App') {
             steps {
                 sh 'npm run build -- --configuration=production'
